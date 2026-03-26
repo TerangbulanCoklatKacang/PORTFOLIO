@@ -410,7 +410,6 @@ function Portfolio() {
               src={`/images/OJK${n}.png`}
               alt={`OJK Portfolio ${n}`}
               className="ojk-img"
-              loading="lazy"
             />
           </div>
         ))}
@@ -427,7 +426,6 @@ function Portfolio() {
                 src={src}
                 alt={`Himpunan Portfolio ${n}`}
                 className="ojk-img"
-                loading="lazy"
               />
             </div>
           );
@@ -456,7 +454,6 @@ function Portfolio() {
                 src={src}
                 alt={`Lainnya Portfolio ${index + 1}`}
                 className={isCropped ? 'ojk-img-cover' : 'ojk-img'}
-                loading="lazy"
               />
             </div>
           );

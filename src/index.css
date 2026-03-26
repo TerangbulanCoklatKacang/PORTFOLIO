@@ -1133,7 +1133,6 @@ body {
 
 .ojk-img {
   width: 100%;
-  aspect-ratio: 4/3;
   object-fit: contain;
   display: block;
   background-color: #f8f8f8;

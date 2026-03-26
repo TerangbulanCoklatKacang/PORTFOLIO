@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Home, User, Briefcase, Wrench, FolderOpen, ChevronLeft, ChevronRight, Play, Menu, X } from 'lucide-react';
+import { Home, User, Briefcase, Wrench, FolderOpen, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

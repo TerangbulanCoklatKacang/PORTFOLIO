@@ -1117,6 +1117,12 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Shimmer keyframe for loading placeholder */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
 .ojk-card {
   overflow: hidden;
   display: flex;
@@ -1124,6 +1130,12 @@ body {
   background-color: white;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  /* Minimum height so card is always visible while image loads */
+  min-height: 120px;
+  /* Shimmer skeleton as background while image hasn't expanded the card yet */
+  background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
 }
 
 .ojk-card:hover {
@@ -1131,6 +1143,7 @@ body {
   box-shadow: 7px 7px 0 var(--shadow-color);
 }
 
+/* Once image loads it sits on top of the shimmer background naturally */
 .ojk-img {
   width: 100%;
   object-fit: contain;
